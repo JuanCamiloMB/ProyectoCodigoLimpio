@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Carrito de compra</h2>
+    <ul class="itemsCarrito">
+        <li *ngFor="let itemCarrito of ListaCarrito">
+            <div #item>
+                <app-carrito-item [itemCarrito]="itemCarrito"></app-carrito-item>
+            </div>
+        </li>
+    </ul>
+    
+</div>
+<div class="TotalLbl">
+    <label>{{total()}}$</label>
+</div>
+<div class="buttonClass">
+    <button (click)="pagar()">Pagar</button>
+</div>
